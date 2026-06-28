@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# Next.js build output
+.next/
+**/ .next/
+out/
+
+# Python caching & environments
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+.env.local
+
+# Log files and diagnostics
+*.log
+.system_generated/
+scratch/
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-display: var(--font-space-grotesk), sans-serif;
+}
+
+/* 
+  Project Aether: Design Tokens & Custom CSS Styles
+  Aligned with Apple / Tesla visual precision guidelines.
+*/
+
+:root {
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #141416;
+  --bg-tertiary: #1e1e22;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  
+  --accent: #e82127; /* Tesla Deep Crimson */
+  --accent-hover: #ff333a;
+  
+  --success: #10b981;
+  --warning: #f59e0b;
+  
+  --border-color: #222226;
+  --focus-ring: rgba(232, 33, 39, 0.5);
+  
+  --max-width: 1200px;
+}
+
+:root.light {
+  --bg-primary: #f5f5f7; /* Apple Off-White */
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e5e5ea;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --border-color: #d1d1d6;
+  --focus-ring: rgba(232, 33, 39, 0.3);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Outlined Focus Ring */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Base Layout Container */
+.container-custom {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Translucent Header */
+.header-glass {
+  background-color: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+:root.light .header-glass {
+  background-color: rgba(245, 245, 247, 0.8);
+}
+
+/* Obsidian Card Panels */
+.card-obsidian {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-obsidian:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Command Terminal CLI Overlay */
+.terminal-overlay {
+  background-color: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.terminal-box {
+  background-color: #0c0c0e;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+}
+
+/* Standardized Buttons */
+.btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 14px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 14px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--text-secondary);
+}
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Static Geometric Dot Grid Overlay */
+.geometric-dots {
+  background-image: radial-gradient(var(--border-color) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Muted badges */
+.badge-tech {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Accessibility reduced motion definitions */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+}

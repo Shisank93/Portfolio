@@ -1,0 +1,11 @@
+{
+  "name": "project-aether",
+  "private": true,
+  "packageManager": "pnpm@9.7.0",
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "cd apps/backend && uvicorn app.main:app --port 8000 --reload",
+    "build:frontend": "pnpm --filter frontend build",
+    "start:frontend": "pnpm --filter frontend start"
+  }
+}
