@@ -53,7 +53,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-[11px] font-mono">
               <li className="hover:text-white transition-colors">
-                shisank@example.com
+                shisankyadav8@gmail.com
               </li>
               <li className="hover:text-white transition-colors">
                 Ghaziabad, India
@@ -89,7 +89,7 @@ export function Footer() {
           
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com/shisank" 
+              href="https://github.com/Shisank93" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-zinc-500 hover:text-white transition-colors"

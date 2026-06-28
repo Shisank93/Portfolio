@@ -73,8 +73,8 @@ export default function ResumePage() {
           </div>
 
           <div className="text-xs font-mono text-zinc-400 print:text-zinc-700 space-y-1 text-left md:text-right">
-            <div>Email: shisank@example.com</div>
-            <div>GitHub: github.com/shisank</div>
+            <div>Email: shisankyadav8@gmail.com</div>
+            <div>GitHub: github.com/Shisank93</div>
             <div>LinkedIn: linkedin.com/in/shisank</div>
             <div>Location: Ghaziabad, India</div>
           </div>

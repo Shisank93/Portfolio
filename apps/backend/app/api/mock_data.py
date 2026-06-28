@@ -40,7 +40,7 @@ PROJECTS = [
                 "solution": "Built a summary compressor service that summarizes dialogue history using sliding window token margins."
             }
         ],
-        "code_repo_url": "https://github.com/shisank/astraeus-ai",
+        "code_repo_url": "https://github.com/Shisank93/astraeus-ai",
         "demo_url": "https://astraeus.shisank.dev",
         "related_project_ids": ["helios-raft", "project-aether"]
     },
@@ -78,7 +78,7 @@ PROJECTS = [
                 "solution": "Implemented term validation protocols, strict quorum verification checks, and pre-vote election mechanisms."
             }
         ],
-        "code_repo_url": "https://github.com/shisank/helios-raft",
+        "code_repo_url": "https://github.com/Shisank93/helios-raft",
         "demo_url": "https://helios.shisank.dev",
         "related_project_ids": ["astraeus-ai"]
     },
@@ -117,7 +117,7 @@ PROJECTS = [
                 "solution": "Engineered a client-side mock LLM fallback in Javascript that intercepts requests, scans intent, and streams pre-grounded structured responses."
             }
         ],
-        "code_repo_url": "https://github.com/shisank/portfolio",
+        "code_repo_url": "https://github.com/Shisank93/Portfolio",
         "demo_url": "https://shisank.dev",
         "related_project_ids": ["astraeus-ai", "helios-raft"]
     }
